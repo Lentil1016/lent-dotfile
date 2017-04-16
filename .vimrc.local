@@ -1,0 +1,32 @@
+
+"==============airline optionals=================
+  let g:airline_powerline_fonts = 1 
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  nnoremap <F3> :bp<CR>
+  nnoremap <F4> :bn<CR>
+
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"==============airline optionals=================
+
+set mouse=a
+"set term=screen
+
+set term=xterm-256color
+colorscheme flatcolor
+"colorscheme enigma
+let g:airline_theme='onedark'
+set list listchars=tab:\|\ ,trail:·
+set noexpandtab
+
