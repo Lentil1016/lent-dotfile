@@ -5,16 +5,16 @@ pushd ~
 mkdir .dotfile
 pushd .dotfile
 
-wget https://github.com/Lentil1016/lent-dotfile/blob/master/.zshrc
-wget https://github.com/Lentil1016/lent-dotfile/blob/master/.vimrc.local
-wget https://github.com/Lentil1016/lent-dotfile/blob/master/.bashrc
-wget https://github.com/Lentil1016/lent-dotfile/blob/master/.gdbinit
+wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.zshrc
+wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.gdbinit
+wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.bashrc
+wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.vimrc.local
 
 popd
 
-ln -s dotfile/.zshrc .zshrc
-ln -s dotfile/.vimrc.local .vimrc.local
-ln -s dotfile/.bashrc .bashrc
-ln -s dotfile/.gdbinit .gdbinit
+ln -sf .dotfile/.zshrc .zshrc
+ln -sf .dotfile/.vimrc.local .vimrc.local
+ln -sf .dotfile/.bashrc .bashrc
+ln -sf .dotfile/.gdbinit .gdbinit
 
 popd
