@@ -7,6 +7,7 @@ curl https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/bootstrap.
 # Notice
 
 This script will forcibly replace the following files at ~/
+And bring in some dependency
 
 |Replaced Files|dependency|
 |-|-|
