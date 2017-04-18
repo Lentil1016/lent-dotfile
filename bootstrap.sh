@@ -12,9 +12,9 @@ wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.vimrc.loc
 
 popd
 
-ln -sf .dotfile/.zshrc .zshrc
-ln -sf .dotfile/.vimrc.local .vimrc.local
-ln -sf .dotfile/.bashrc .bashrc
-ln -sf .dotfile/.gdbinit .gdbinit
+ln -sf ~/.dotfile/.zshrc ~/.zshrc
+ln -sf ~/.dotfile/.vimrc.local ~/.vimrc.local
+ln -sf ~/.dotfile/.bashrc ~/.bashrc
+ln -sf ~/.dotfile/.gdbinit ~/.gdbinit
 
 popd
