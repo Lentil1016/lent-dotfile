@@ -1,27 +1,26 @@
 #!/bin/bash
 
-pushd ~
+PWD=`pwd`
 
-mkdir .dotfile
-pushd .dotfile
+cd ~
 
-rm -f *
+rm -rf ~/.dotfile
+mkdir ~/.dotfile
+cd ~/.dotfile
 
 wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.zshrc
 wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.gdbinit
 wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.bashrc
 wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.vimrc.local
 
-popd
+cd ~
 
-rm -f ~/.zshrc
-rm -f ~/.vimrc.local
-rm -f ~/.bashrc
-rm -f ~/.gdbinit
+rm -f ~/.zshrc ~/.vimrc.local ~/.bashrc ~/.gdbinit
+
 
 ln -sf ~/.dotfile/.zshrc ~/.zshrc
 ln -sf ~/.dotfile/.vimrc.local ~/.vimrc.local
 ln -sf ~/.dotfile/.bashrc ~/.bashrc
 ln -sf ~/.dotfile/.gdbinit ~/.gdbinit
 
-popd
+cd $PWD
