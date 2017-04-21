@@ -4,8 +4,13 @@
 # Path to your oh-my-zsh installation.
 if [ -d /home/lentild/.oh-my-zsh ]; then
 	export ZSH=/home/lentild/.oh-my-zsh
-else if [ -d /home/lentil/.oh-my-zsh/ ];then
-	export ZSH=/home/lentil/.oh-my-zsh
+else 
+	if [ -d /home/lentil/.oh-my-zsh/ ];then
+		export ZSH=/home/lentil/.oh-my-zsh
+	else
+		echo "$0 Can't find .oh-my-zsh dir"
+	fi
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
