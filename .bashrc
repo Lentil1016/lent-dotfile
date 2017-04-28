@@ -8,7 +8,7 @@ alias mv='mv -i'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 export PS1="\e[36m[\e[32m_\#_\e[31m\u\e[36m@china-cloud \W]\e[m\$ "
