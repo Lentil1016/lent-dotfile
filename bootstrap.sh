@@ -8,10 +8,10 @@ rm -rf ~/.dotfile
 mkdir ~/.dotfile
 cd ~/.dotfile
 
-wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.zshrc
-wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.gdbinit
-wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.bashrc
-wget https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.vimrc.local
+curl -O https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.zshrc
+curl -O https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.gdbinit
+curl -O https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.bashrc
+curl -O https://raw.githubusercontent.com/Lentil1016/lent-dotfile/master/.vimrc.local
 
 cd ~
 
