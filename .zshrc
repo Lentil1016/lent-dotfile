@@ -88,14 +88,14 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$fg[green]%}
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$fg[red]%}
 
-alias findst="find . -type f|xargs grep --color=auto -n"
+alias findstr="find . -type f|xargs grep --color=auto -n"
 alias tmuxnew="tmux new -s"
 alias tmuxin="tmux attach -t"
 alias docker="sudo docker"
-alias reg="voltron view register"
-alias stk="voltron view stack"
-alias asm="voltron view disasm"
-alias bt="voltron view backtrace"
+alias gdb1="voltron view register"
+alias gbd2="voltron view stack"
+alias gbd3="voltron view disasm"
+alias gdb4="voltron view backtrace"
 alias findps="ps aux|grep "
 PATH="$PATH:$HOME/.local/bin"
 # User configuration
