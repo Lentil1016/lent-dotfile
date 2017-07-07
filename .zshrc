@@ -8,7 +8,11 @@ else
 	if [ -d /home/lentil/.oh-my-zsh/ ];then
 		export ZSH=/home/lentil/.oh-my-zsh
 	else
-		echo "$0 Can't find .oh-my-zsh dir"
+		if [ -d /home/sunyk/.oh-my-zsh/ ];then
+			export ZSH=/home/sunyk/.oh-my-zsh
+		else
+			echo "$0 Can't find .oh-my-zsh dir"
+		fi
 	fi
 fi
 
