@@ -101,6 +101,7 @@ alias gdb2="voltron view stack"
 alias gdb3="voltron view disasm"
 alias gdb4="voltron view backtrace"
 alias findps="ps aux|grep "
+alias sl="ls"
 PATH="$PATH:$HOME/.local/bin"
 # User configuration
 
