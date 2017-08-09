@@ -92,7 +92,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$fg[green]%}
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$fg[red]%}
 
-alias findstr="find . -type f|xargs grep --color=auto -n"
+alias findstr="find . -type f|grep -v tags|xargs grep --color=auto -n"
 alias tmuxnew="tmux new -s"
 alias tmuxattach="tmux attach -t"
 alias docker="sudo docker"
