@@ -72,14 +72,15 @@ export LSCOLORS=dxFxCxDxBxegedabagacad
 
 local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
+post_fix="%{$reset_color$FG[012]%} %{$reset_color%}";
 PROMPT="
-%{$FG[012]%}╭─%n@%m %{$reset_color%}%{$FG[010]%}%~ %{$reset_color%}${git_branch}
-%{$FG[012]%}╰\$ %{$reset_color%}"
+%{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%}%n%m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%}%~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[009]%}╰\$ %{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$FX[bold]$FG[011]%}on "
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}%{$FX[bold]$FG[000]$BG[011]%}  "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color$FG[011]%} %{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}%{$fg[red]%} ✘ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} ✘ %{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED=true
@@ -102,7 +103,12 @@ alias gdb3="voltron view disasm"
 alias gdb4="voltron view backtrace"
 alias findps="ps aux|grep "
 alias sl="ls"
-PATH="$PATH:$HOME/.local/bin"
+alias ls="/bin/ls --color=auto"
+export PATH="$PATH:$HOME/.local/bin"
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+export TERM="xterm-256color"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
