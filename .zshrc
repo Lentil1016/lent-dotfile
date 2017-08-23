@@ -79,7 +79,7 @@ local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
 post_fix="%{$reset_color$FG[012]%} %{$reset_color%}";
 PROMPT="
-%{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%}%n  %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%}%~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%} %n  %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%}%~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[009]%}╰\$ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}%{$FX[bold]$FG[000]$BG[011]%}  "
