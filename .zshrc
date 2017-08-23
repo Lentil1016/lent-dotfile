@@ -77,7 +77,7 @@ export LSCOLORS=dxFxCxDxBxegedabagacad
 
 local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
-user_color="173"
+user_color="011"
 root_color="203"
 host_color="203"
 path_color="012"
