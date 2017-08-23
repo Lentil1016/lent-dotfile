@@ -87,12 +87,12 @@ post_fix="%{$reset_color$FG[$path_color]%} %{$reset_color%}";
 
 if [ `id -u` -eq 0 ]; then
 	PROMPT="
-%{$FG[$user_color]%}╭─%{$reset_color$FG[$user_color]%}%{$FG[000]$BG[$host_color]%} %n  %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
-%{$FG[$user_color]%}╰\$ %{$reset_color%}"
-else
-	PROMPT="
 %{$FG[$root_color]%}╭─%{$reset_color$FG[$root_color]%}%{$FG[000]$BG[$root_color]%} %n %{$FG[$host_color]%}%{$BG[$host_color]$FG[000]%} %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[$root_color]%}╰\$ %{$reset_color%}"
+else
+	PROMPT="
+%{$FG[$user_color]%}╭─%{$reset_color$FG[$user_color]%}%{$FG[000]$BG[$host_color]%} %n  %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[$user_color]%}╰\$ %{$reset_color%}"
 fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[214]%}%{$FX[bold]$FG[000]$BG[214]%}  "
