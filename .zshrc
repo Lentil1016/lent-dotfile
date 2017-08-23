@@ -78,10 +78,10 @@ export LSCOLORS=dxFxCxDxBxegedabagacad
 local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
 root_color="009"
-user_color="214"
-host_color="214"
+user_color="203"
+host_color="203"
 path_color="012"
-git_color="214"
+git_color="203"
 
 post_fix="%{$reset_color$FG[$path_color]%} %{$reset_color%}";
 
@@ -95,15 +95,15 @@ else
 %{$FG[$user_color]%}╰\$ %{$reset_color%}"
 fi
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[214]%}%{$FX[bold]$FG[000]$BG[214]%}  "
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color$FG[214]%} %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[$git_color]%}%{$FX[bold]$FG[000]$BG[$git_color]%}  "
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} ✘ %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[red]%} ✘ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[green]%} ✔ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED=true
-ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[214]%}("
-ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_SUFFIX="%{$FG[214]%})%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[$git_color]%}("
+ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_SUFFIX="%{$FG[$git_color]%})%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" +"
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$FG[002]%}
