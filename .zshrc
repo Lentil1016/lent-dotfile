@@ -79,24 +79,24 @@ local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
 post_fix="%{$reset_color$FG[012]%} %{$reset_color%}";
 PROMPT="
-%{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%} %n  %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%}%~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%} %n  %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%} %~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[009]%}╰\$ %{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}%{$FX[bold]$FG[000]$BG[011]%}  "
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color$FG[011]%} %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[214]%}%{$FX[bold]$FG[000]$BG[214]%}  "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color$FG[214]%} %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} ✘ %{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED=true
-ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[011]%}("
-ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_SUFFIX="%{$FG[011]%})%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[214]%}("
+ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_SUFFIX="%{$FG[214]%})%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" +"
-ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$fg[green]%}
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$FG[002]%}
 
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
-ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$fg[red]%}
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$FG[001]%}
 
 alias findstr="find . -type f|grep -v tags|xargs grep --color=auto -n"
 alias tmuxnew="tmux new -s"
