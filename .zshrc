@@ -78,9 +78,16 @@ export LSCOLORS=dxFxCxDxBxegedabagacad
 local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
 post_fix="%{$reset_color$FG[012]%} %{$reset_color%}";
-PROMPT="
+
+if [ `id -u` -eq 0 ]; then
+	PROMPT="
 %{$FG[009]%}╭─%{$reset_color$FG[009]%}%{$FG[000]$BG[009]%} %n  %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%} %~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[009]%}╰\$ %{$reset_color%}"
+else
+	PROMPT="
+%{$FG[214]%}╭─%{$reset_color$FG[214]%}%{$FG[000]$BG[214]%} %n %{$FG[009]%}%{$BG[009]$FG[000]%} %m %{$FG[012]$BG[009]%}%{$FG[000]$BG[012]%} %~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[214]%}╰\$ %{$reset_color%}"
+fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[214]%}%{$FX[bold]$FG[000]$BG[214]%}  "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color$FG[214]%} %{$reset_color%}"
