@@ -77,8 +77,8 @@ export LSCOLORS=dxFxCxDxBxegedabagacad
 
 local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
 
-root_color="009"
-user_color="203"
+user_color="173"
+root_color="203"
 host_color="203"
 path_color="012"
 git_color="203"
@@ -87,11 +87,11 @@ post_fix="%{$reset_color$FG[$path_color]%} %{$reset_color%}";
 
 if [ `id -u` -eq 0 ]; then
 	PROMPT="
-%{$FG[$root_color]%}╭─%{$reset_color$FG[$root_color]%}%{$FG[000]$BG[$root_color]%} %n %{$FG[$host_color]%}%{$BG[$host_color]$FG[000]%} %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[$root_color]%}╭─%{$reset_color$FG[$root_color]%}%{$FG[000]$BG[$host_color]%} %n  %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[$root_color]%}╰\$ %{$reset_color%}"
 else
 	PROMPT="
-%{$FG[$user_color]%}╭─%{$reset_color$FG[$user_color]%}%{$FG[000]$BG[$host_color]%} %n  %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
+%{$FG[$user_color]%}╭─%{$reset_color$FG[$user_color]%}%{$FG[000]$BG[$user_color]%} %n %{$FG[$host_color]%}%{$BG[$host_color]$FG[000]%} %m %{$FG[$path_color]$BG[$host_color]%}%{$FG[000]$BG[$path_color]%} %~ ${post_fix}%{$reset_color%}${git_branch}
 %{$FG[$user_color]%}╰\$ %{$reset_color%}"
 fi
 
