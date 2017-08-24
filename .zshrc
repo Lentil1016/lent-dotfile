@@ -68,14 +68,14 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git svn)
 
 source $ZSH/oh-my-zsh.sh
 
 export CLICOLOR=1
 export LSCOLORS=dxFxCxDxBxegedabagacad
 
-local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)'
+local git_branch='$(git_prompt_info)%{$reset_color%}$(git_remote_status)$(svn_prompt_info)'
 
 user_color="011"
 root_color="203"
@@ -110,6 +110,11 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$FG[002]%}
 
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$FG[001]%}
+
+ZSH_THEME_SVN_PROMPT_PREFIX="%{$reset_color$FG[$git_color]%}{$FG[$000]$BG[git_color]} svn:"
+ZSH_THEME_SVN_PROMPT_SUFFIX=" %{$reset_color$FG[$git_color]%}"
+ZSH_THEME_SVN_PROMPT_DIRTY="${VCS_DIRTY_COLOR} ✘${VCS_SUFIX_COLOR}"
+ZSH_THEME_SVN_PROMPT_CLEAN="${VCS_CLEAN_COLOR} ✔${VCS_SUFIX_COLOR}"
 
 alias findstr="find . -type f|grep -v tags|xargs grep --color=auto -n"
 alias tmuxnew="tmux new -s"
