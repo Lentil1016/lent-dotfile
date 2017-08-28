@@ -106,15 +106,15 @@ ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[$git_color]%}("
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_SUFFIX="%{$FG[$git_color]%})%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" +"
-ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$FG[002]%}
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$FG[010]%}
 
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
-ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$FG[001]%}
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$FG[009]%}
 
 ZSH_THEME_SVN_PROMPT_PREFIX="%{$reset_color$FG[$git_color]%}%{$FG[000]$BG[$git_color]%} svn:"
 ZSH_THEME_SVN_PROMPT_SUFFIX=" %{$reset_color$FG[$git_color]%}"
-ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg[red]%} ✘%{$reset_color%}"
-ZSH_THEME_SVN_PROMPT_CLEAN="%{$fg[green]%} ✔%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_DIRTY="%{$FG[009]%} ✘%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_CLEAN="%{$FG[010]%} ✔%{$reset_color%}"
 
 alias findstr="find . -type f|grep -v tags|xargs grep --color=auto -n"
 alias tmuxnew="tmux new -s"
