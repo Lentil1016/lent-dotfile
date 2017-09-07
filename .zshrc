@@ -71,6 +71,7 @@ fi
 plugins=(git svn)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.pathrc.local
 
 export CLICOLOR=1
 export LSCOLORS=dxFxCxDxBxegedabagacad
@@ -127,10 +128,13 @@ alias gdb4="voltron view backtrace"
 alias findps="ps aux|grep "
 alias sl="ls"
 alias ls="/bin/ls --color=auto"
-export PATH="$PATH:$HOME/.local/bin"
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
+if [ -f $HOME/.pathrc ]; then
+	source $HOME/.pathrc
+fi
+
 
 # User configuration
 
