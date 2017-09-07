@@ -76,8 +76,8 @@ fi
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[$git_color]%}%{$FX[bold]$FG[000]$BG[$git_color]%}  "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[red]%} ✘ %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[green]%} ✔ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[009]%} ✘ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$reset_color$FG[$git_color]%}%{$reset_color$fg[010]%} ✔ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED=true
 ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_PREFIX="%{$FG[$git_color]%}("
