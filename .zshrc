@@ -41,9 +41,11 @@ alias gdb4="voltron view backtrace"
 alias findps="ps aux|grep "
 alias sl="ls"
 alias ls="/bin/ls --color=auto"
+alias to="source ~/script/to"
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
+export PATH="$PATH:$HOME/script"
 
 
 #===============================
