@@ -19,7 +19,7 @@ else
 fi
 
 # decide plugins to be loaded.
-plugins=(git svn)
+plugins=(git svn docker)
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -42,6 +42,10 @@ alias findps="ps aux|grep "
 alias sl="ls"
 alias ls="/bin/ls --color=auto"
 alias to="source ~/script/to"
+alias kube="kubectl"
+alias kubeget="kubectl get -o wide"
+alias kubed="kubectl describe"
+alias kubeall="kubectl get --all-namespace all"
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
