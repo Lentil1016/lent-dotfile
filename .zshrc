@@ -46,12 +46,16 @@ alias kube="kubectl"
 alias kubeget="kubectl get -o wide"
 alias kubed="kubectl describe"
 alias kubeall="kubectl get -o wide --all-namespace all"
-alias dkrmdie="docker ps -a|grep Exited|awk \'{print \$1}\'|xargs -i docker rm {}"
+alias ddie="docker ps -a|grep Exited|awk '{print \$1}'|xargs -i docker rm {}"
+alias dnone="docker images|grep none|awk '{print \$3}'|xargs -i docker rmi {}"
+alias dimg="docker images|awk '{print \$3}'|xargs -i docker rmi {}"
+alias tree="tree -C"
+alias treee="tree -Cfi"
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
 export PATH="$PATH:$HOME/script"
-
+export GOPATH="$HOME/.go"
 
 #===============================
 # Powerline-style theme
