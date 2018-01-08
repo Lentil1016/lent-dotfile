@@ -27,6 +27,7 @@ set term=xterm-256color
 colorscheme flatcolor
 "colorscheme enigma
 let g:airline_theme='onedark'
+let g:go_version_warning = 0
 set list listchars=tab:\|\ ,trail:·
 set noexpandtab
 
