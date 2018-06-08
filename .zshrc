@@ -1,7 +1,7 @@
 
 # find Oh-my-zsh path
-if [ -d /home/lentild/.oh-my-zsh ]; then
-	export ZSH=/home/lentild/.oh-my-zsh
+if [ -d $HOME/.oh-my-zsh ]; then
+	export ZSH=$HOME/.oh-my-zsh
 else 
 	if [ -d /home/lentil/.oh-my-zsh/ ];then
 		export ZSH=/home/lentil/.oh-my-zsh
