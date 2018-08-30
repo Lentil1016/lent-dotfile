@@ -54,8 +54,8 @@ alias treee="tree -nfi"
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
-export PATH="$PATH:$HOME/script"
-export GOPATH="$HOME/.go"
+export GOPATH="${HOME}/.go"
+export PATH="${PATH}:{$HOME}/script:${GOPATH}/bin"
 
 #===============================
 # Powerline-style theme
