@@ -19,7 +19,7 @@ else
 fi
 
 # decide plugins to be loaded.
-plugins=(git svn docker kubectl)
+plugins=(git svn docker)
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -28,6 +28,15 @@ source $ZSH/oh-my-zsh.sh
 if [ -f $HOME/.pathrc ]; then
 	source $HOME/.pathrc
 fi
+
+# kubectl lazy load, check https://github.com/kubernetes/kubernetes/issues/59078 for more details.
+function kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
+
+    command kubectl "$@"
+}
 
 # some alias and environment configurations
 alias findstr="find . -type f|grep -v tags|xargs grep --color=auto -n"
