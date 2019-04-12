@@ -65,6 +65,9 @@ export LC_ALL="zh_CN.UTF-8"
 export TERM="xterm-256color"
 export GOPATH="${HOME}/.go"
 export PATH="${PATH}:{$HOME}/script:${GOPATH}/bin"
+alias goc="cd $GOPATH/src"
+alias gocd="cd $GOPATH/src; cd"
+alias gome="cd $GOPATH/src/github.com/lentil1016/"
 
 #===============================
 # Powerline-style theme
